@@ -3,22 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:elevation="4dp">
+        android:layout_height="300px"
+        android:elevation="10dp"
+        android:background="#4CAF50"
+        android:paddingLeft="70dp"
+        android:paddingTop="20dp"
+        >
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cities"
-            android:textAppearance="?attr/textAppearanceHeadline6" />
+            android:text="ListyCities"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+
+            />
 
     </com.google.android.material.appbar.MaterialToolbar>
+
+
 
     <ListView
         android:id="@+id/city_list"
@@ -26,6 +36,15 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
-        android:padding="8dp" />
+        android:padding="10dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_add_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="40dp"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </LinearLayout>
